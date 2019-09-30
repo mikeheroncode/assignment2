@@ -1,0 +1,29 @@
+a. Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (7/7), 854 bytes | 427.00 KiB/s, done.
+Total 7 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/mikeheroncode/assignment2.git
+   f4975e5..6ff365b  master -> master
+
+b. 9
+git rev-list --all | wc -l
+
+c. Wed Sep 25 18:13:30 2019 -0400
+git log -1 .gitignore
+
+d. Branches are used so that multiple individuals can work on a project without overwriting anyone's work and also so that a repository can be organized into many different parts while still allowing for people to easily review code and see who is working on what.
+
+e. Git log is a command to show the user a history of commits from any given point in a repository while git status is used to show the current status of the working tree and show the user the differences between their index file and the current HEAD commit.
+
+f. git log --follow -- Vehicle.h
+
+g. git log --all --grep='file'
+
+h. Inheritance is the ability to write general code that will share components with more specific code implementations. The classic example is with a car class inheriting things like a MoveForward function from a vehicle class. Polymorphism is the ability to have specific details of such inherited functions differ in their specific implementations such as MoveForward taking gas for a Car class and moving faster than it the Bike class which would not require gas. Encapsulation is the ability to hide specific implementation details like speed or weight of general classes like Vehicle in their more specific implementations such as Bike or Car.
+
+i. In a centralized workflow all developers share in the responsibility for making sure their work is first merged with the existing code on the repository before actually pushing and making changes to the centralized repository and requires that developers communicate to ensure this goes smoothly. The Dictator and Lieutenants workflow is different because instead of developers working with and pushing to a central repository, they instead rebase existing code onto new versions of the central "blessed repository" and then push code changes to their master branch. When the Lieutenants are ready to make changes they first merge all of their developers changes together onto their master repository and push that. Then when the dictator is ready to make changes they merge all their lieutenants onto their master branch and then push that to the blessed repository which is then taken by all the developers so that they can rebase any existing unpushed changes to the new master blessed repository.
+
+j.  A team of 100 developers would work better in a Dictator and Lieutenants workflow because instead of all developers having to communicate and make sure they aren't trying to merge at the same time they just have to worry about pushing to their master branch and someone else will be able to carefully review how their changes might affect the other team members work. This goes up the chain allow Lieutenants to focus on merging in their developers work and not worry about merging with/overwriting the other lieutenants work because this will be taken care of by the director. This model would be alleviate the communication burden/cost of lost work as compared to the centralized workflow at the cost of developer freedom/flexibility in merges. 
