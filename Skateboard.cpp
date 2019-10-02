@@ -21,7 +21,7 @@ double Skateboard::mileageEstimate(double time) {
     double milesPerMin = (rand()%5 + 1) / 10;
     double mileage = milesPerMin * time;
     if (time > 25 && time < 250){
-        mileage += (rand()%3 + 1) / 3 * time
+        mileage += (rand()%3 + 1) / 3 * time;
     }
     return mileage;
 }
