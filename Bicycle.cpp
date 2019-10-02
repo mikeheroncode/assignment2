@@ -5,7 +5,7 @@
 #include "Bicycle.h"
 
 
-Bicycle::Bicycle(string brand, string model, int gearCount) {
+Bicycle::Bicycle(string brand, string model, int gearCount=3) {
     setBrand(brand);
     setModel(model);
     setGearCount(gearCount);
