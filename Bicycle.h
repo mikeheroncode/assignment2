@@ -13,7 +13,7 @@ private:
     int myGearCount;
 
 public:
-    explicit Bicycle(string brand, string model, int gearCount/*=3*/);
+    explicit Bicycle(string brand, string model, int gearCount=3);
 
     virtual ~Bicycle();
     int getGearCount();
