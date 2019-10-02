@@ -5,9 +5,6 @@
 
 class Skateboard : public Vehicle {
 
-private:
-    int myGearCount;
-
 public:
     explicit Skateboard(string brand, string model);
 

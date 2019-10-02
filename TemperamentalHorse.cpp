@@ -1,19 +1,20 @@
-#include "Bicycle.h"
+#include <cstdlib>
+#include "TemperamentalHorse.h"
 
 
-Bicycle::Bicycle(string brand, string model, int gearCount=3) {
+TemperamentalHorse::TemperamentalHorse(string brand, string model, string mood) {
     setBrand(brand);
     setModel(model);
     setGearCount(gearCount);
 }
 
-Bicycle::~Bicycle() = default;
+TemperamentalHorse::~TemperamentalHorse() = default;
 
-string Bicycle::getMood() {
+string TemperamentalHorse::getMood() {
     return Mood;
 }
 
-void Bicycle::setMood(string mood) {
+void TemperamentalHorse::setMood(string mood) {
     if (Mood == "good" || Mood == "fine" || Mood == "bad")
         Mood = mood;
     else{
@@ -21,7 +22,7 @@ void Bicycle::setMood(string mood) {
     }
 }
 
-double Bicycle::mileageEstimate(double time) {
+double TemperamentalHorse::mileageEstimate(double time) {
     double mileage;
     if (Mood == "bad"){
         mileage = 0;
@@ -38,8 +39,8 @@ double Bicycle::mileageEstimate(double time) {
     return mileage;
 }
 
-string Bicycle::toString() {
-    string s = "-> Bicycle\n\t";
-    return "-> Bicycle\n" + Vehicle::toString() + "\n\tMood: " +
+string TemperamentalHorse::toString() {
+    string s = "-> TemperamentalHorse\n\t";
+    return "-> TemperamentalHorse\n" + Vehicle::toString() + "\n\tMood: " +
            Mood;
 }
